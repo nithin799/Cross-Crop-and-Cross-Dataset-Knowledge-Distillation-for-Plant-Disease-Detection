@@ -1,0 +1,77 @@
+# ========================================
+# Datasets (large, not suitable for GitHub)
+# ========================================
+Beans dataset/
+Lentil Augmented Dataset/
+Lentil Original Dataset/
+data/Beans_dataset/
+data/Lentil_Augmented_Dataset/
+data/Lentil_Original_Dataset/
+
+# ========================================
+# Model weight files
+# ========================================
+models/*.keras
+models/*.h5
+models/*.hdf5
+models/*.weights.h5
+*.keras
+*.h5
+*.hdf5
+*.pb
+*.tflite
+*.onnx
+
+# ========================================
+# Jupyter Notebook checkpoints
+# ========================================
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# ========================================
+# Python
+# ========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ========================================
+# Virtual environments
+# ========================================
+venv/
+env/
+.env/
+.venv/
+
+# ========================================
+# IDE / Editor
+# ========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ========================================
+# OS generated
+# ========================================
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+
+# ========================================
+# Temporary files
+# ========================================
+*.tmp
+*.bak
+*.log
+
+# ========================================
+# Old empty directories (to be deleted)
+# ========================================
+Code/
