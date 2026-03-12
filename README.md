@@ -1,10 +1,16 @@
 # Cross-Crop and Cross-Dataset Knowledge Distillation for Plant Disease Detection
 
-A research project investigating **cross-crop feature-based knowledge distillation** to transfer learned disease representations from a lentil disease model (teacher) to a bean disease classifier (student). Both crops belong to the *Fabaceae* family, sharing similar physiological characteristics and disease manifestations.
+## Problem Statement
+
+Plant diseases cause significant crop losses worldwide, and early detection through automated systems is critical for food security. While deep learning has shown promising results in plant disease classification, training accurate models requires large, well-labeled datasets for each individual crop species — a resource that is often scarce or expensive to obtain.
+
+**This project addresses the following research question:** *Can diagnostic knowledge learned from one crop species be effectively transferred to a different but botanically related crop species using knowledge distillation, thereby improving classification performance on the target crop without requiring additional labeled data from the source domain?*
+
+Specifically, we investigate whether a ResNet101 model trained to classify diseases in **lentil plants** (Family: *Fabaceae*) can serve as a teacher to improve student models classifying diseases in **bean plants** (also *Fabaceae*). The taxonomical similarity between these crops — shared physiological characteristics, leaf morphology, and overlapping disease manifestations (e.g., rust, blight) — provides a scientific basis for this cross-crop transfer.
 
 ## Overview
 
-Plant disease detection using deep learning typically requires large labeled datasets for each crop. This project explores whether knowledge learned from one crop (lentil) can be effectively transferred to another crop (beans) via knowledge distillation, reducing the data and training requirements for the target domain.
+This research project investigates **cross-crop feature-based knowledge distillation** to transfer learned disease representations from a lentil disease model (teacher) to a bean disease classifier (student). The approach leverages intermediate feature representations rather than just output logits, enabling richer knowledge transfer across datasets with different numbers of classes (4 lentil classes vs. 3 bean classes).
 
 ### Key Contributions
 
@@ -28,7 +34,7 @@ Plant disease detection using deep learning typically requires large labeled dat
 ├── docs/
 │   ├── literature/                       # Reference papers
 │   ├── figures/                          # Flowcharts and dataset visualizations
-│   └── reports/                          # Project reports
+│   └── reports/                          # Final report, presentation, and project reports
 ├── data/                                 # Datasets (not tracked, see setup below)
 └── models/                               # Saved model weights (not tracked)
 ```
@@ -103,3 +109,10 @@ See `requirements.txt` for the full dependency list.
 ## Results
 
 Detailed results including confusion matrices, ROC curves, and training curves are available in the `results/` directory. Summary result tables are in `results/result_tables/`.
+
+## Documentation
+
+- **Final Report**: [`docs/reports/Report.pdf`](docs/reports/Report.pdf)
+- **Presentation**: [`docs/reports/Presentation.pdf`](docs/reports/Presentation.pdf)
+- **Result Tables**: Available in [`results/result_tables/`](results/result_tables/)
+- **Literature Review**: Reference papers in [`docs/literature/`](docs/literature/)
